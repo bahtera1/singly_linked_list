@@ -14,4 +14,9 @@ namespace singly_linked_list
         public string name;
         public Node next;
     }
+    class list
+    {
+
+    }
+
 }
