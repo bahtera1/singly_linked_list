@@ -96,18 +96,28 @@ namespace singly_linked_list
             return true;
         }
 
-        public bool Search(int nim, ref Node previous, ref Node current)
+        public bool Search (int nim, ref Node previous, ref Node current)
         {
             previous = START;
             current = START;
 
             while((current != null) && (nim != current.rollNumber))
             {
-                if (current == null)
-                    return false;
-                else
-                    return true;
+              previous= current;
+              current = current.next;
             }
+            if (current == null)
+                return false;
+            else
+                return true;
+        }
+
+        public bool listEmpty()
+        {
+            if (START == null)
+                return true;
+            else
+                return false;   
         }
     }
 
