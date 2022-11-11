@@ -35,16 +35,36 @@ namespace singly_linked_list
             newnode.name = nm;
 
             //if the note to be inserted is the first node
-            if((START != null ) && (nim == START.rollNumber))
+            if((START == null ) && (nim == START.rollNumber))
             {
                 if ((START != null) && (nim== START.rollNumber))
                 {    
                         Console.WriteLine("\nDuplicate roll numbers not allowed\n");
                         return;
                 }
+                newnode.next = START;
+                START = newnode;
+                return;
             }
 
-           
+            //locate the position of the new node in the list
+            Node previous, current = START;
+            previous= START;
+            current = START;
+
+            while ((current!= null)&&(nim>=current.rollNumber))
+            {
+                if(nim==current.rollNumber)
+                {
+                    Console.WriteLine("\nDuplicate roll Numbers not Allowed \n");
+                    return;
+                }
+                previous=current;
+                current = current.next;
+            }
+            /*once the above for loop is executed,prev and current are positoned in such a manner that the position for the new node*/
+            newnode.next = current;
+            previous.next = newnode;
         }
     }
 
