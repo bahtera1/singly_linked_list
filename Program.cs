@@ -34,6 +34,17 @@ namespace singly_linked_list
             newnode.rollNumber = nim;
             newnode.name = nm;
 
+            //if the note to be inserted is the first node
+            if((START != null ) && (nim == START.rollNumber))
+            {
+                if ((START != null) && (nim== START.rollNumber))
+                {    
+                        Console.WriteLine("\nDuplicate roll numbers not allowed\n");
+                        return;
+                }
+            }
+
+           
         }
     }
 
