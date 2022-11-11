@@ -120,5 +120,14 @@ namespace singly_linked_list
                 return false;   
         }
     }
+    class program
+    {
+        //check wheter the specified node is present int the list or not
+
+        static void Main(string[]args)
+        {
+            
+        }
+    }
 
 }
