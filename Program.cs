@@ -192,7 +192,13 @@ namespace singly_linked_list
                             Console.WriteLine('\n Roll number'+ current.rollNumber);
                             Console.WriteLine('\n Name' + current.name);
                         }
-
+                    }
+                    break ;
+                case '5':
+                        return;
+                    default:
+                        {
+                        Console.WriteLine()
                     }
                 }
             }
