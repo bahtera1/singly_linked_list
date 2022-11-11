@@ -155,45 +155,46 @@ namespace singly_linked_list
                                     break;
                                 }
 
-                            Console.Write("\nEnter the roll number of" +
-                                "the students whose record is to be deleted : ");
-                            int nim = Convert.ToInt32(Console.ReadLine());
-                            Console.WriteLine();
-                            if (obj.delNode(nim) == false)
-                                Console.WriteLine("\n Record not found");
-                            else
-                                Console.WriteLine("Record with roll number" + nim + "deleted");
-                    }
-                    break;
-
-                case '4':
-                    {
-                        if (obj.listEmpty() == true)
-                        {
-                            Console.WriteLine("\n list is empty");
+                                Console.Write("\nEnter the roll number of" +
+                                    "the students whose record is to be deleted : ");
+                                int nim = Convert.ToInt32(Console.ReadLine());
+                                Console.WriteLine();
+                                if (obj.delNode(nim) == false)
+                                    Console.WriteLine("\n Record not found");
+                                else
+                                    Console.WriteLine("Record with roll number" + nim + "deleted");
+                            }
                             break;
-                        }
-                        Node previous, current;
-                        previous = current = null;
-                        Console.Write("\nEnter the roll number of the+" +
-                            "students whose records is to be searched");
-                        int num = Convert.ToInt32(Console.ReadLine());
-                        if (obj.Search(num, ref previous, ref current) == false)
-                            Console.WriteLine('\nrecord not found');
-                        else
-                        {
-                            Console.WriteLine("\n Record not found");
-                            Console.WriteLine('\n Roll number' + current.rollNumber);
-                            Console.WriteLine('\n Name' + current.name);
-                        }
-                    }
-                    break;
-                case '5':
-                        return;
-                    default:
-                        {
-                        Console.WriteLine("\n Invalid option");
-                        break;
+
+                        case '4':
+                            {
+                                if (obj.listEmpty() == true)
+                                {
+                                    Console.WriteLine("\n list is empty");
+                                    break;
+                                }
+                                Node previous, current;
+                                previous = current = null;
+                                Console.Write("\nEnter the roll number of the+" +
+                                    "students whose records is to be searched");
+                                int num = Convert.ToInt32(Console.ReadLine());
+                                if (obj.Search(num, ref previous, ref current) == false)
+                                    Console.WriteLine("\n Record not Found");
+                                else
+                                {
+                                    Console.WriteLine("\n Record not found");
+                                    Console.WriteLine("\n Roll number' + current.rollNumber");
+                                    Console.WriteLine("\n Name" + current.name);
+                                }
+                            }
+                            break;
+                        case '5':
+                            return;
+                        default:
+                            {
+                                Console.WriteLine("\n Invalid option");
+                                break;
+                            }
                     }
                 }
                 catch (Exception)
